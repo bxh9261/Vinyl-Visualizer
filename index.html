@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Audio Visualizer</title>
+	<link href="styles/default-styles.css" type="text/css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
+	<script src="./src/loader.js" type="module"></script>
+</head>
+<body>
+<main>
+	<div id="controls">
+        <h1>Vinyl Visualizer</h1>
+		<section>
+            <audio src="media/cynical.mp3"></audio>
+                <section class="box">
+                    <select id="trackSelect">
+                        <option value="media/cynical.mp3,media/california.png" selected>Cynical - blink-182</option>
+                        <option value="media/call-it-karma.mp3,media/discovering-the-waterfront.png">Call It Karma - Silverstein</option>
+					    <option value="media/the-hound-and-the-fox.mp3,media/oil-in-water.png">The Hound And The Fox - I The Mighty</option>
+				    </select>
+                </section>
+            <button id="playButton" data-playing="no">Play</button>
+		</section>
+		
+		<section id="sliders">
+            <span class="slideClass">
+                Volume: <input type="range" id="volumeSlider" min="0" max="2" value="1" step="0.01" class="slider">
+            </span>
+            <span class="slideClass">
+                Rotation Speed: <input type="range" id="rotSlider" min="0" max="2" value="1" step="0.01" class="slider">
+            </span>
+            <span class="slideClass">
+                Bar Height: <input type="range" id="barSlider" min="0" max="2" value="1" step="0.01" class="slider">
+            </span>
+            <span class="slideClass">
+                Richter Scale: <input type="range" id="earSlider" min="0" max="2" value="0" step="0.01" class="slider">
+            </span>
+            <span class="slideClass">
+                Bass Boost: <input type="range" id="basSlider" min="0" max="2" value="0" step="0.01" class="slider">
+            </span>
+            <span class="slideClass">
+                Treble Boost: <input type="range" id="treSlider" min="0" max="2" value="0" step="0.01" class="slider">
+            </span>
+		</section>
+        
+        <section id="CB">
+            <div class="row">
+                <label class="container">Show Gradient
+                    <input type="checkbox" id="gradientCB" checked>
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container">Show Bars
+                    <input type="checkbox" id="barsCB" checked>
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container">Show Album Cover
+                  <input type="checkbox" id="circlesCB" checked>
+                  <span class="checkmark"></span>
+                </label>
+            </div>
+            <div class="row">
+                <label class="container">Show Noise
+                  <input type="checkbox" id="noiseCB">
+                  <span class="checkmark"></span>
+                </label>
+                <label class="container">Invert Colors
+                  <input type="checkbox" id="invertCB">
+                  <span class="checkmark"></span>
+                </label>
+                <label class="container">Show Emboss
+                  <input type="checkbox" id="embossCB">
+                  <span class="checkmark"></span>
+                </label>
+            </div>
+        </section>
+        
+        <section id="RB">
+            <label class="container">Frequency
+              <input type="radio" checked="checked" name="radio" id="freq">
+              <span class="radio"></span>
+            </label>
+            <label class="container">Wave
+              <input type="radio" name="radio" id="wave">
+              <span class="radio"></span>
+            </label>
+        </section>
+        
+        <button id="fsButton">Full Screen</button>
+	</div>
+    <canvas width="980" height="700"></canvas>
+    
+</main>
+</body>
+</html>

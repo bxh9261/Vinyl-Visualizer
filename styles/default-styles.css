@@ -1,0 +1,297 @@
+body {
+	background-image: url("../media/record.jpg");
+	font-family: 'Pacifico', cursive;
+    color: white;
+}
+
+h1{
+    text-align: center;
+}
+
+canvas {
+    margin-right: 1%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-left: 2%;
+	box-shadow: 4px 4px 8px rgba(0,0,0,0.5);
+	background: #fafafa;
+    float:left; 
+    display:inline; 
+    width: 60%;
+    border: 10px solid black;
+    border-radius: 5px;
+    border-color: black;
+    
+}
+
+#controls{
+    opacity: 0.8;
+    margin-left: 1%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    float:left; 
+    display:inline; 
+    width: 30%;
+    border: 10px solid black;
+    padding: 1rem;
+    border-radius: 5px;
+    background-color: rgba(128,0,128,0.8);
+}
+
+section{
+  margin-bottom: 1rem;
+}
+
+#playButton{
+  font-size: 1.2rem;
+  width: 35%;
+  float: right;
+}
+
+button{
+  background-color: #966fd6;
+  padding: 12px;
+  border: 5px solid black;
+  border-radius: 5px;
+  font-size: 20px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+  -webkit-appearance: button;
+  appearance: button;
+  outline: none;
+  font-family: 'Pacifico', cursive;
+  color: white;
+  
+}
+
+button:hover{
+    background-color: purple;
+}
+
+button:active{
+    background-color: white;
+}
+
+#fsButton{
+  font-size: 1.2rem;
+  width: 100%;
+  
+}
+
+.box select {
+  background-color: #966fd6;
+  padding: 12px;
+  border: 5px solid black;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+  -webkit-appearance: button;
+  appearance: button;
+  outline: none;
+  font-family: 'Pacifico', cursive;
+  color: white;
+  width: 60%;
+  float: left;
+}
+
+.box select option {
+  padding: 30px;
+}
+
+.box select option:hover{
+    background-color: purple;
+}
+
+/*--------------------------------------------------SLIDERS-------------------------------------------------------*/
+/*https://www.w3schools.com/howto/howto_js_rangeslider.asp*/
+/*https://stackoverflow.com/questions/35719124/justify-content-space-between-failing-to-align-elements-as-expected*/
+
+#sliders{
+    margin-top: 5em;
+    margin-bottom: 10%;
+    padding-top: 10%;
+    width: 100%;
+}
+
+.slideClass{
+    display: flex;
+    justify-content: space-between;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 60%;
+  height: 25px;
+  background: #eee;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+  border: 5px solid black;
+  border-radius: 5px;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  background: #966fd6;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background: purple;
+  cursor: pointer;
+}
+
+/*--------------------------------------------------CHECKBOXES-------------------------------------------------------*/
+/*https://www.w3schools.com/howto/howto_css_custom_checkbox.asp*/
+
+#CB{
+    margin-bottom: 5%;
+}
+
+/* The container */
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 5%;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.row{
+    display: flex;
+    justify-content: space-around;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #ccc;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #eee;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #966fd6;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+/*--------------------------------------------------RADIO BUTTONS-------------------------------------------------------*/
+/*https://www.w3schools.com/howto/howto_css_custom_checkbox.asp*/
+
+
+/* Create a custom radio button */
+.radio {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+#RB{
+    display: flex;
+    justify-content: space-around;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .radio {
+  background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.container input:checked ~ .radio {
+  background-color: #966fd6;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.radio:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container input:checked ~ .radio:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.container .radio:after {
+  top: 9px;
+  left: 9px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+}
+
+@media screen and (max-width: 1200px){
+    canvas{
+        width: 98%;
+        height: auto;
+        position: relative;
+        margin: 0 auto;
+    }
+    #controls
+    {
+        width: 93%; 
+        margin: auto;
+        margin-top:1rem;
+    }
+}
